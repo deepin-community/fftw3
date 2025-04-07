@@ -1,3 +1,68 @@
+fftw3 (3.3.10-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ chenzhanwang <chenzhanwang@loongson.cn> ]
+  * Add loong64 architecture support to libfftw (libfftw3-long3)
+    (Closes: #1050691)
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Sat, 26 Oct 2024 13:58:51 +0200
+
+fftw3 (3.3.10-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Steffen Moeller ]
+  * d/copyright: format changed to be machine readable.
+
+  [ Jelmer Vernooĳ ]
+  * Trim trailing whitespace.
+
+  [ Sébastien Villemot ]
+  * Rewrite d/rules using dh sequencer.
+    By the way, fix some missing checks for DEB_BUILD_OPTIONS=nocheck
+  * Bump to debhelper compat level 13
+    - dh_autoreconf run by default
+    - doc installed under /u/s/doc/libfftw-dev/
+    - dh_makeshlibs now defaults to -V
+  * d/upstream/metadata:
+    - move to correct location
+    - add more fields
+  * Remove useless libfftw3-dev.dirs
+  * d/copyright: update copyright years
+  * d/control:
+    + remove obsolete Breaks/Conflicts/Replaces/Provides
+    + remove obsolete versioned Build-Depends on dpkg and ghostscript
+    + remove useless Build-Depends on dh-autoreconf
+    + add Rules-Requires-Root: no
+  * d/tests/{build,tools}: replace $ADTTMP with $AUTOPKGTEST_TMP
+  * Reword abstract in d/libfftw3-doc.doc-base.fftw3-faq to make
+    lintian happy
+  * Remove transitional package libfftw3-3, it no longer has
+    reverse dependencies
+
+  [ Boyuan Yang ]
+  * New upstream release 3.3.10.
+  * debian/watch: Monitor with https instead of ftp.
+  * bump Standards-Version to 4.6.1.
+  * Apply patch from Ubuntu:
+
+  [ Heinrich Schuchardt ]
+  * enable building libfftw3-long3 on riscv64 (LP: #1939516)
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Use secure URI in Homepage field.
+
+  [ Andreas Tille ]
+  * Fix Maintainer name of Debian Science team (routine-update)
+  * Reorder sequence of d/control fields by cme (routine-update)
+  * Add salsa-ci file (routine-update)
+  * Set hardening options
+  * lintian-overrides (see lintian bug #1017966)
+
+ -- Andreas Tille <tille@debian.org>  Wed, 30 Nov 2022 17:40:47 +0100
+
 fftw3 (3.3.8-2) unstable; urgency=medium
 
   * Add fftw3.info-1 and fftw3.info-2 to libfftw3-doc (closes: #880618)
@@ -193,7 +258,7 @@ fftw3 (3.3.2-2) unstable; urgency=low
   * remove workaround for a transient gcc failure on arm (LP: #841437)
   * enable runtime detected neon extension support on arm and armhf
   * enable sse extensions for kfreebsd (Closes: #674760)
-    avx not supported yet 
+    avx not supported yet
   * drop 04_improve_semaphore_detection.diff
     semaphores are not shared anymore since 3.2.2
   * enable hardening options
@@ -240,7 +305,7 @@ fftw3 (3.3.1-3) experimental; urgency=low
   * Add the multiarch support. Thanks to Julian Taylor for the patch
     (Closes: #664155)
   * Fix some various silly and useless conflicts (Closes: #664156)
-  
+
  -- Sylvestre Ledru <sylvestre@debian.org>  Thu, 15 Mar 2012 23:08:45 +0100
 
 fftw3 (3.3.1-1) experimental; urgency=low
@@ -348,7 +413,7 @@ fftw3 (3.1.2-3) unstable; urgency=low
   * Rename fftw3{,-dev,-doc} to libfftw3{,-dev,-doc}.
     (closes: #430238, #378444)
   * Add Conflicts/Replaces/Provides to all packages accordingly.
-  * Add -$(RM) -rf debian/tmp-long-double to debian/rules:clean 
+  * Add -$(RM) -rf debian/tmp-long-double to debian/rules:clean
     (closes: #424261)
 
  -- Paul Brossier <piem@debian.org>  Fri, 03 Aug 2007 13:33:47 +0200

@@ -1,7 +1,7 @@
 #!/bin/bash
 set -efu
 
-cd $ADTTMP
+cd $AUTOPKGTEST_TMP
 
 # only float and double are available on all platforms
 cat << EOF > double.c
