@@ -8,8 +8,8 @@ Abstract: This manual describes how to use fftw (version 3).
 Section: Programming
 
 Format: HTML
-Index: /usr/share/doc/libfftw3-doc/html/index.html
-Files: /usr/share/doc/libfftw3-doc/html/*.html
+Index: /usr/share/doc/libfftw3-dev/html/index.html
+Files: /usr/share/doc/libfftw3-dev/html/*.html
 
 Format: Info
 Index: /usr/share/info/fftw3.info.gz
